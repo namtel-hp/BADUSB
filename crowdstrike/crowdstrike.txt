@@ -1,0 +1,61 @@
+DELAY 1000
+REM Navigate to Troubleshoot
+DOWNARROW
+DELAY 500
+DOWNARROW
+DELAY 500
+DOWNARROW
+DELAY 500
+ENTER
+DELAY 1000
+
+REM Navigate to Advanced Options
+DOWNARROW
+DELAY 500
+DOWNARROW
+DELAY 500
+ENTER
+DELAY 1000
+
+REM Navigate to Startup Settings
+DOWNARROW
+DELAY 500
+DOWNARROW
+DELAY 500
+DOWNARROW
+DELAY 500
+DOWNARROW
+DELAY 500
+ENTER
+DELAY 1000
+
+REM Restart to access Startup Settings
+ENTER
+DELAY 1000
+
+REM Select option for Safe Mode with Networking
+F5
+DELAY 30000
+
+REM Open Command Prompt as Administrator
+CONTROL ESCAPE
+DELAY 500
+STRING cmd
+DELAY 500
+CONTROL SHIFT ENTER
+DELAY 1000
+REM Confirm UAC prompt
+ALT Y
+DELAY 1000
+
+REM Navigate to Crowdstrike folder and delete files
+STRING cd C:\windows\system32\drivers\Crowdstrike
+ENTER
+DELAY 500
+STRING del C-00000291*.sys
+ENTER
+DELAY 500
+
+REM Reboot the system
+STRING shutdown /r /t 0
+ENTER
